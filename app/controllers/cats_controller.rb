@@ -24,9 +24,11 @@ class CatsController < ApplicationController
   # POST /cats
   # POST /cats.json
   def create
+    #cat_params is a method that returns parameters sent from form in hash-like object
     @cat = Cat.new(cat_params)
 
     respond_to do |format|
+      #@cat.save validates the record &, if valid, saves to DB & returns true
       if @cat.save
         format.html { redirect_to @cat, notice: 'Cat was successfully created.' }
         format.json { render :show, status: :created, location: @cat }

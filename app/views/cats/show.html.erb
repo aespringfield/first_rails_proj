@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @cat.name %>
@@ -10,5 +9,6 @@
   <%= @cat.breed %>
 </p>
 
+# edit_cat_path is a method provided by a method call in config/routes.rb
 <%= link_to 'Edit', edit_cat_path(@cat) %> |
 <%= link_to 'Back', cats_path %>
